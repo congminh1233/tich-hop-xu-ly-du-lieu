@@ -1,0 +1,59 @@
+name: it5427-serving
+x-app: &app
+  image: it5427-serving:1.0
+  build: .
+  user: "${SERVING_UID}:${SERVING_GID}"
+  environment:
+    PGHOST: postgres
+    PGDATABASE: toniot_analytics
+    PGUSER: toniot
+    PGPASSWORD: ${POSTGRES_PASSWORD}
+    HOME: /tmp
+    PYTHONDONTWRITEBYTECODE: '1'
+    PYTHONUNBUFFERED: '1'
+  logging:
+    driver: json-file
+    options:
+      max-size: 10m
+      max-file: '3'
+services:
+  postgres:
+    image: postgres:16.10-bookworm
+    environment:
+      POSTGRES_DB: toniot_analytics
+      POSTGRES_USER: toniot
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - analytics_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U toniot -d toniot_analytics"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    mem_limit: 768m
+    restart: unless-stopped
+  loader:
+    <<: *app
+    profiles: [tools]
+    volumes:
+      - ../..:/project:ro
+      - ../../reports/serving:/reports
+    mem_limit: 1536m
+    command: [python, /app/loader.py, --help]
+  dashboard:
+    <<: *app
+    command: [streamlit, run, /app/dashboard.py, --server.address=0.0.0.0, --server.port=8501, --browser.gatherUsageStats=false, --server.headless=true]
+    ports:
+      - '127.0.0.1:8501:8501'
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health', timeout=5)"]
+      interval: 10s
+      timeout: 6s
+      retries: 12
+    mem_limit: 1024m
+    restart: unless-stopped
+volumes:
+  analytics_data:

@@ -1,0 +1,8 @@
+# Dependencies for the WSL ETL and evaluation environment.
+pyarrow==19.0.1
+pyspark==3.5.7
+numpy==1.26.4
+scipy==1.14.1
+scikit-learn==1.5.2
+joblib==1.4.2
+threadpoolctl==3.5.0

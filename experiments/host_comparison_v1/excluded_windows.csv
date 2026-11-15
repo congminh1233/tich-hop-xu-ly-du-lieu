@@ -1,0 +1,5 @@
+﻿entity_id,window_start,split,label_observed,reasons
+windows10_host,1556076120,train,1,host_cpu_mean:missing_or_nonnumeric;host_cpu_max:missing_or_nonnumeric
+windows7_host,1554256800,train,0,host_cpu_mean:missing_or_nonnumeric;host_cpu_max:missing_or_nonnumeric
+windows7_host,1556485980,test,1,host_cpu_mean:missing_or_nonnumeric;host_cpu_max:missing_or_nonnumeric
+windows7_host,1556487360,test,1,host_cpu_mean:missing_or_nonnumeric;host_cpu_max:missing_or_nonnumeric

@@ -1,0 +1,9 @@
+*
+!Dockerfile
+!entrypoint.sh
+!conf/
+!conf/**
+!jobs/
+!jobs/**
+**/__pycache__/
+**/*.pyc

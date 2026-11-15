@@ -1,0 +1,52 @@
+{
+  "version": "time-e3602e3e9840e7b9",
+  "unix": {
+    "unit": "seconds",
+    "timezone": "UTC"
+  },
+  "iot": {
+    "iot_weather": {
+      "offset_seconds": 25200,
+      "evidence": {
+        "source_id": "iot_weather",
+        "ground_truth_sha256": "8c967703b1081581b45f1b01d20f9091438c5df9453b7ec9b2df43ed40a05b52",
+        "offset_counts": {
+          "25200": 55890
+        },
+        "parse_failures": 0
+      },
+      "status": "verified_on_ground_truth",
+      "normal_rows_assumption": "Same encoding within stream; not independently verified on normal rows",
+      "timezone": "unknown"
+    },
+    "iot_modbus": {
+      "offset_seconds": 25200,
+      "evidence": {
+        "source_id": "iot_modbus",
+        "ground_truth_sha256": "07199c40dab24da43a7ad3f18bba42100b7ead1106e2b1ccba31a6f5682f496c",
+        "offset_counts": {
+          "25200": 59989
+        },
+        "parse_failures": 0
+      },
+      "status": "verified_on_ground_truth",
+      "normal_rows_assumption": "Same encoding within stream; not independently verified on normal rows",
+      "timezone": "unknown"
+    },
+    "iot_garage_door": {
+      "offset_seconds": 25200,
+      "evidence": {
+        "source_id": "iot_garage_door",
+        "ground_truth_sha256": "c6e2a9401d9b972e83b32da65d0113f29299b3a15c52ad16ecd5ddafd7a3d2f7",
+        "offset_counts": {
+          "25200": 58633
+        },
+        "parse_failures": 0
+      },
+      "status": "verified_on_ground_truth",
+      "normal_rows_assumption": "Same encoding within stream; not independently verified on normal rows",
+      "timezone": "unknown"
+    }
+  },
+  "note": "No automatic +7h. Run validate-time for each IoT ground-truth file. The prior plan reports +25200 seconds; this must be verified against local artifacts."
+}

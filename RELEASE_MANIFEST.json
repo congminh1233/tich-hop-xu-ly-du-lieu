@@ -1,0 +1,691 @@
+{
+  "version": 2,
+  "description": "Slim reviewed payload; excludes this manifest itself",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 84,
+      "sha256": "f2f15013d60d537832ca9a916145c22ea9e5dde7b1fc5fb622ab75325c6dc953"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 333,
+      "sha256": "6b10152f27cb8ec75fb06c4252252edfa2fb37be90350242dffe3d217db40661"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1523,
+      "sha256": "329fabed8c5e7f1593a8bb40f929c0dbc4b493fe309edc7a8d2f0f48ac6e6186"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16574,
+      "sha256": "5680a991acf6c08a4c7f1e6c3c04906de7dae061f01180917f6444d67e6c4f68"
+    },
+    {
+      "path": "RELEASE_VALIDATION.md",
+      "bytes": 1448,
+      "sha256": "97d3b3cba5506bfe08dbbdf4435d6dce5c7d860a234a6ddab680d7579969299a"
+    },
+    {
+      "path": "config/dataset_manifest.json",
+      "bytes": 6515,
+      "sha256": "8ce6c5900072f8bc0a0b15ed1467ab4f6f80d9f4f80f256e42548d8bd570e931"
+    },
+    {
+      "path": "config/entities.json",
+      "bytes": 430,
+      "sha256": "680f729cee90e4970b0b87a8be90898a95c672b077a06c2511d2a5ed1534e4c1"
+    },
+    {
+      "path": "config/expected_files.json",
+      "bytes": 757,
+      "sha256": "dcc43b27f90bad558c6af3a4f12db68ebdc6575a14e7d3afc8f3ce26c579d89a"
+    },
+    {
+      "path": "config/time_rules.json",
+      "bytes": 272,
+      "sha256": "7010ae562a16e992e04c0e8ce25ca6af124ba3f14fad29f1ede25346830f9a5b"
+    },
+    {
+      "path": "config/time_rules.verified.json",
+      "bytes": 1766,
+      "sha256": "ec5d0dc875be9a6104571c8401eeb0cd081579830387399c17a05741e2eb9e28"
+    },
+    {
+      "path": "docs/BENCHMARK.md",
+      "bytes": 9492,
+      "sha256": "30b091d070e56df8cc32403822fd9a11f42172192e6d0e04fb0fbdf3552b9e2e"
+    },
+    {
+      "path": "docs/YEU_CAU_TICH_HOP.md",
+      "bytes": 8538,
+      "sha256": "f5146734ca406598aba992c5c422bfe5874efc654720e5f0a225137d18c4c7a7"
+    },
+    {
+      "path": "experiments/host_baseline_v1/excluded_windows.csv",
+      "bytes": 475,
+      "sha256": "21cd720fda1673d020c49559211d52551754ce51c66609d2b3cc861117ae88c1"
+    },
+    {
+      "path": "experiments/host_baseline_v1/input_checksums.json",
+      "bytes": 10306,
+      "sha256": "f646dc25777e53ff7889fc1de06429e27c87ecf8abaf71423d1b91eed95c1cc1"
+    },
+    {
+      "path": "experiments/host_baseline_v1/metrics.csv",
+      "bytes": 8539,
+      "sha256": "c45078b4d05e1528c6fa4308c2716079c6d3f248cd0681353c692524c3c41d6d"
+    },
+    {
+      "path": "experiments/host_baseline_v1/metrics.json",
+      "bytes": 25466,
+      "sha256": "ae32ba80a3d1655561ff6c1a507e98f8b741acc8d26e0df99397e770a471dcfe"
+    },
+    {
+      "path": "experiments/host_baseline_v1/models.json",
+      "bytes": 11657,
+      "sha256": "53df53dac9e640b9956bbd5e95ad6ea99f993e071f445790ff1b80b4ab331979"
+    },
+    {
+      "path": "experiments/host_baseline_v1/scores.parquet",
+      "bytes": 546799,
+      "sha256": "bf45d37ca47d311e026d0b188f6c30d948e384d82863dc9919cf15e01f865f27"
+    },
+    {
+      "path": "experiments/host_baseline_v1/summary.json",
+      "bytes": 49914,
+      "sha256": "8448c96f707f8979304d25424c6e83d731d170512a4048480b15d9ea04a2da13"
+    },
+    {
+      "path": "experiments/host_baseline_v1/training_roles.csv",
+      "bytes": 51090,
+      "sha256": "242af8397de8ecabdd20822793c950d5f7c41d8ef49044b69ae46f6bc0aef77c"
+    },
+    {
+      "path": "experiments/host_comparison_v1/excluded_windows.csv",
+      "bytes": 475,
+      "sha256": "21cd720fda1673d020c49559211d52551754ce51c66609d2b3cc861117ae88c1"
+    },
+    {
+      "path": "experiments/host_comparison_v1/feature_profiles.csv",
+      "bytes": 15573,
+      "sha256": "b042acf986921ef543e9fefa46ca4f0ff18661d01be29e1858186e8f54dd6d13"
+    },
+    {
+      "path": "experiments/host_comparison_v1/input_checksums.json",
+      "bytes": 10306,
+      "sha256": "f646dc25777e53ff7889fc1de06429e27c87ecf8abaf71423d1b91eed95c1cc1"
+    },
+    {
+      "path": "experiments/host_comparison_v1/integration_audit.json",
+      "bytes": 1096,
+      "sha256": "407add39b42a3490e6923afc1a2a25544d0e9a7455f85835a427ef77ac52afd1"
+    },
+    {
+      "path": "experiments/host_comparison_v1/integration_deltas.csv",
+      "bytes": 3568,
+      "sha256": "fff1acc7e5cff5c92f8abf478d6f976ea67f12e6302d6081c13d1e0881523eea"
+    },
+    {
+      "path": "experiments/host_comparison_v1/metrics.csv",
+      "bytes": 36885,
+      "sha256": "af9f2cb9e812a18865f292c27271b545063cdca82a0b4f0682979c6169b27dcf"
+    },
+    {
+      "path": "experiments/host_comparison_v1/models.json",
+      "bytes": 52583,
+      "sha256": "58ee252a1c550a72d769f39230b6712969a49e0e77e4c178643da353657bd8fc"
+    },
+    {
+      "path": "experiments/host_comparison_v1/scores.parquet",
+      "bytes": 368261,
+      "sha256": "79175dd9f74d9c079d3effc575678f6ee998bfc8047c1d57a409aca3408aadd3"
+    },
+    {
+      "path": "experiments/host_comparison_v1/summary.json",
+      "bytes": 133256,
+      "sha256": "ed3ba89457c73af4dfaef657256c0f654b0a1c1ce152f75ba62027a04209405d"
+    },
+    {
+      "path": "experiments/host_comparison_v1/training_roles.csv",
+      "bytes": 268963,
+      "sha256": "6e2188449ee8e8d73176871842ee1c3b2f18a7e7b1b2369b101c1962fc94121b"
+    },
+    {
+      "path": "experiments/iot_baseline_v1/excluded_windows.csv",
+      "bytes": 46914,
+      "sha256": "652bf008d7352a10e45921511b42347e57ef70d3edd88f8d9c2064f513bfdb56"
+    },
+    {
+      "path": "experiments/iot_baseline_v1/input_checksums.json",
+      "bytes": 394,
+      "sha256": "ba216d933e4a1d0186b643a389ea42a4933a574680f663667f939b5dda8cd409"
+    },
+    {
+      "path": "experiments/iot_baseline_v1/metrics.csv",
+      "bytes": 2554,
+      "sha256": "77305444ea47001465a743484a6d64e780e134982b52107682a7aaeb5fd68233"
+    },
+    {
+      "path": "experiments/iot_baseline_v1/models.json",
+      "bytes": 5968,
+      "sha256": "8eff18b62d4ef09bb52e08b7ced079117c73de37097070cbbac4cf18c994ea67"
+    },
+    {
+      "path": "experiments/iot_baseline_v1/reference_metrics.json",
+      "bytes": 4152,
+      "sha256": "3e729703564b88fe97b35cfa61c85273aed2b130413e55538a1fa1d16da03d85"
+    },
+    {
+      "path": "experiments/iot_baseline_v1/scores.parquet",
+      "bytes": 602382,
+      "sha256": "90cf3e263b6e59b763aed2992024e85b52c689a02316bed5f2885141dbaa2ec1"
+    },
+    {
+      "path": "experiments/iot_baseline_v1/summary.json",
+      "bytes": 25685,
+      "sha256": "7afa85c2f2d40e04d1ecf4e9b203dbbea9430117ce82085efe6f8716115e2f49"
+    },
+    {
+      "path": "experiments/iot_baseline_v1/training_roles.csv",
+      "bytes": 488999,
+      "sha256": "90204e0c023b7547b104553d2937dfe36f260a1f7752ee3c29d3291bcadcbab5"
+    },
+    {
+      "path": "infra/airflow/.dockerignore",
+      "bytes": 14,
+      "sha256": "08bb7a70af4ae5a9c15226f499f2e76055ebd521550f87eb102a1316cdb9df38"
+    },
+    {
+      "path": "infra/airflow/.env.example",
+      "bytes": 360,
+      "sha256": "131ada77c8384b662d192aa70d44d427481dac6f76dcad1d84ccd4aaa7809610"
+    },
+    {
+      "path": "infra/airflow/.gitignore",
+      "bytes": 26,
+      "sha256": "8e6d616cb4632bd8338281cbc5212d7ee420c46958fa774fefa6581a3fe46aeb"
+    },
+    {
+      "path": "infra/airflow/Dockerfile",
+      "bytes": 297,
+      "sha256": "69db6ea09de4c38bf27f18ae417930d26438504dd744647eb36f425893cab140"
+    },
+    {
+      "path": "infra/airflow/compose.yaml",
+      "bytes": 3071,
+      "sha256": "05f13d2aefafb8b2aeb45f0ec7bbe95c432e7ee185306a4c56478bed5d63a6fe"
+    },
+    {
+      "path": "infra/airflow/dags/toniot_batch_serving.py",
+      "bytes": 3522,
+      "sha256": "818f5617c97be74064a4105f15a969ead50f5768b004acee87c318ab5dec640e"
+    },
+    {
+      "path": "infra/airflow/dags/toniot_hdfs_batch.py",
+      "bytes": 2603,
+      "sha256": "610da46174013a7f25fd75bd55e0c6eb6a8d6b3bd00341d16647bd50bfce333f"
+    },
+    {
+      "path": "infra/airflow/manage.py",
+      "bytes": 8953,
+      "sha256": "9143723c012e981ce245e580f9523844deb1da477af1362859111ef86da670fb"
+    },
+    {
+      "path": "infra/airflow_serving/manage.py",
+      "bytes": 11193,
+      "sha256": "12f55fc0ce3e195a245a840423e36814d0dd190ea9e1b3569748a58bae9f3358"
+    },
+    {
+      "path": "infra/airflow_serving/toniot_batch_serving.py",
+      "bytes": 3522,
+      "sha256": "818f5617c97be74064a4105f15a969ead50f5768b004acee87c318ab5dec640e"
+    },
+    {
+      "path": "infra/benchmark/common.py",
+      "bytes": 4041,
+      "sha256": "bb846ea919ede0f5f0c2887b29c7a380746af9170be767b939541a9ad6b4ab1c"
+    },
+    {
+      "path": "infra/benchmark/job.py",
+      "bytes": 11474,
+      "sha256": "d743ff1c204747a0a86ebab864bd609e6551283b7ac7391e20aecdd8916a94ab"
+    },
+    {
+      "path": "infra/benchmark/manage.py",
+      "bytes": 8826,
+      "sha256": "20cb7a1be3903b0b5136bdad9afeb2ed888e1e6c897288c10fd7d1719d8bb1a5"
+    },
+    {
+      "path": "infra/hdfs/.dockerignore",
+      "bytes": 86,
+      "sha256": "0b2fc90487e0cfd7aa817d837f25236bc018db7a0cc7510da70cb85110064da3"
+    },
+    {
+      "path": "infra/hdfs/Dockerfile",
+      "bytes": 1985,
+      "sha256": "d36c4640a07ba8a4b867731ce4a9981acf702083662a0d3e8020c69c843993c9"
+    },
+    {
+      "path": "infra/hdfs/compose.yaml",
+      "bytes": 1590,
+      "sha256": "ae7c968adc165cbdee0a8bfcfbfb76049c3dbe87aff81c9e5eb144bcf4d1686d"
+    },
+    {
+      "path": "infra/hdfs/conf/core-site.xml",
+      "bytes": 308,
+      "sha256": "9f151f93c864ddf546a53b9b6b7b20ad7c0850521b52285e8601d924200af65b"
+    },
+    {
+      "path": "infra/hdfs/conf/hdfs-site.xml",
+      "bytes": 1501,
+      "sha256": "c386f15e04b08bd512eb9ad76d8618c5165f24959a94d42f52d6054ec72bffe3"
+    },
+    {
+      "path": "infra/hdfs/entrypoint.sh",
+      "bytes": 531,
+      "sha256": "c7be233f9676546bd0803955aa3acc975d4e052033c2dff1cba5211496100656"
+    },
+    {
+      "path": "infra/hdfs/jobs/health.py",
+      "bytes": 460,
+      "sha256": "8c1e899eb0a8d5ddfcc761e5a3a3f1807905ca2bcc349961f897e39fa5c36361"
+    },
+    {
+      "path": "infra/hdfs/jobs/spark_hdfs_demo.py",
+      "bytes": 4644,
+      "sha256": "39d4fc2f4a2e500996f7fa7ee9ab1d3fc1b593b2718cd4fce3ec520e36af8eff"
+    },
+    {
+      "path": "infra/hdfs/jobs/transfer_gold.py",
+      "bytes": 6144,
+      "sha256": "e536abacfe36cdcb384c20086483203bf92d7ba47ff4afaf13820643cb918808"
+    },
+    {
+      "path": "infra/hdfs/manage.py",
+      "bytes": 6177,
+      "sha256": "fc3c9bf8d6cedf9e6a56f2d117318fd21d90348267d648b01a404886b503ea03"
+    },
+    {
+      "path": "infra/hdfs/tests/test_format_guard.py",
+      "bytes": 1722,
+      "sha256": "cbec3e9d87895e24f4196ff8e29340f705a654523c97614cbe05789789a0db8f"
+    },
+    {
+      "path": "infra/hdfs/tests/test_transfer.py",
+      "bytes": 4379,
+      "sha256": "e053387126b3a573b38f14615c699c282d721d1aab31700a8fc15ff2bfc69ae4"
+    },
+    {
+      "path": "infra/serving/.dockerignore",
+      "bytes": 61,
+      "sha256": "52cdfd0ce54c7d68e7e9646071dfcd7aab25f3c487e1fc3c95a88fff7d83ee34"
+    },
+    {
+      "path": "infra/serving/.env.example",
+      "bytes": 242,
+      "sha256": "d12275acf0373808c65618994ae906bc80060121724b5f3aa551712cc70ea5b1"
+    },
+    {
+      "path": "infra/serving/.gitignore",
+      "bytes": 61,
+      "sha256": "a9fcb278e1304286133da4a6e83b96cbd14ff907ff6243aec965b4fc8b64ea0e"
+    },
+    {
+      "path": "infra/serving/Dockerfile",
+      "bytes": 160,
+      "sha256": "95cc7841b7ec78e2a9ff48c2f699310737a02905bdea542f6c065e2dfd054b8b"
+    },
+    {
+      "path": "infra/serving/app/core.py",
+      "bytes": 3948,
+      "sha256": "8847d9c2ad67a2301803d0c1e313dc3c5349029e40e10c84ccb9694b7be23cc8"
+    },
+    {
+      "path": "infra/serving/app/dashboard.py",
+      "bytes": 9238,
+      "sha256": "560f22d346a29993a815eb424fe4db7aa2b39ead488b0e71c58b50ca016f0f70"
+    },
+    {
+      "path": "infra/serving/app/loader.py",
+      "bytes": 6132,
+      "sha256": "e014ea3284de241b9cea5178908710e136ebe8a303448a862e44657c7d8410e3"
+    },
+    {
+      "path": "infra/serving/app/schema.sql",
+      "bytes": 1451,
+      "sha256": "2cdda89484104c39971de4923b35741ad05f5e56c8828285f086a4eac698bc79"
+    },
+    {
+      "path": "infra/serving/compose.yaml",
+      "bytes": 1586,
+      "sha256": "32dac0b9f366a473cd4fe3231af5d661b771580c42252f7b521ce8478ebb7880"
+    },
+    {
+      "path": "infra/serving/manage.py",
+      "bytes": 5740,
+      "sha256": "b0a44e1ed1c81274723fbebcd3077315862c2a203f63fd56f8faabc25d5aa0d0"
+    },
+    {
+      "path": "infra/serving/requirements.txt",
+      "bytes": 72,
+      "sha256": "5fa9ab1a4bcc9d353feb971263cb9e5e874d4e02393707a3d0a2c97b58d6fcd3"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 173,
+      "sha256": "6dd46edc4253e2eaba81308927eb0efcd738589e864abed3b677ac959756065e"
+    },
+    {
+      "path": "scripts/_host_eval_common.py",
+      "bytes": 21635,
+      "sha256": "a270909dece3e7f2f29f4fe7b695665834d109f8fe2e4369a87284e3c640e0c4"
+    },
+    {
+      "path": "scripts/_iot_common.py",
+      "bytes": 6257,
+      "sha256": "f9dfd9daf7045c027d153960d14daa1dc690eff7f8851a13958deab412488919"
+    },
+    {
+      "path": "scripts/airflow_etl_task.py",
+      "bytes": 6866,
+      "sha256": "388407cbe3d3784ccbdc05891a79ab81e73461f5862abd4557bf5bc29786acc3"
+    },
+    {
+      "path": "scripts/airflow_serving_bridge.py",
+      "bytes": 11211,
+      "sha256": "930bd832f28fcc13a9ef1842322b7399dfa9d17bee3107a792ce9e42577eef7e"
+    },
+    {
+      "path": "scripts/compare_host_models.py",
+      "bytes": 16474,
+      "sha256": "640ab7420de0e690a34abfdc94b396f08fb7de7278f3552369752da0137fd7ad"
+    },
+    {
+      "path": "scripts/diagnose_hdfs.py",
+      "bytes": 12693,
+      "sha256": "830e8f4df2febf9dcdfb3798eedae914d5e906601a985cb0ae19ab64ecbd28e1"
+    },
+    {
+      "path": "scripts/hdfs_etl_common.py",
+      "bytes": 8180,
+      "sha256": "aeb16272231c47d5077e30b2ebef9fcea639b7acb1ef631229d2981cc673d212"
+    },
+    {
+      "path": "scripts/hdfs_etl_compare.py",
+      "bytes": 5276,
+      "sha256": "b5d01f715c32eef3020b8da43df45fb906f7aa816bdb8f90d9eb69c1663a6964"
+    },
+    {
+      "path": "scripts/hdfs_etl_core.py",
+      "bytes": 8292,
+      "sha256": "d58b5d91232598b15714fb8da26592ebfe32a9b52856524345c21f2f5c484051"
+    },
+    {
+      "path": "scripts/install_hdfs_roundtrip_fix.py",
+      "bytes": 1819,
+      "sha256": "397a70037e86b236da54f4b12672d9caa012df850cc604a1081e791916ce9b1c"
+    },
+    {
+      "path": "scripts/prepare_host_evaluation.py",
+      "bytes": 20765,
+      "sha256": "5f928b06b8b59b22327c13a4d1b45e4a4737e8135f75abb3c2aeeeff753913cb"
+    },
+    {
+      "path": "scripts/prepare_iot_evaluation.py",
+      "bytes": 9283,
+      "sha256": "0e74e3f429c422feeca7041fdbfcb437a3441fde59062d6a2ab6b5309e9f3370"
+    },
+    {
+      "path": "scripts/run_hdfs_etl.py",
+      "bytes": 10470,
+      "sha256": "22d5818d59297924e5ae378805f6cb10d184ef2c1a40cfdbcb53299dbc20af50"
+    },
+    {
+      "path": "scripts/run_host_baseline.py",
+      "bytes": 21635,
+      "sha256": "a270909dece3e7f2f29f4fe7b695665834d109f8fe2e4369a87284e3c640e0c4"
+    },
+    {
+      "path": "scripts/run_iot_baseline.py",
+      "bytes": 12392,
+      "sha256": "00068810daa5f796e7ba1780e7a802030d9e6c587e62c4fc82b0766b0636df29"
+    },
+    {
+      "path": "scripts/spark_hdfs_demo_v2.py",
+      "bytes": 8710,
+      "sha256": "f53e518b12aa97eb744278a688deb895a1685b7397318327d23ce3f551293ad9"
+    },
+    {
+      "path": "sql/mediation.sql",
+      "bytes": 882,
+      "sha256": "e5b8de0444ad9143d6505feeb09e32b5fd9ecdcfa6f22da95da492969cccc77c"
+    },
+    {
+      "path": "tests/check_spark_e2e.py",
+      "bytes": 3306,
+      "sha256": "a19997c04cf901bd5c6eb4ffa52a9f5f753c5b25989dcc5d67d5b19b350548b1"
+    },
+    {
+      "path": "tests/fixtures/project/infra/airflow/config/runtime.json",
+      "bytes": 561,
+      "sha256": "63ba5722510fa1fa3c71990f194082b97aa8624c6a7a4a3de0c8981a1179f08a"
+    },
+    {
+      "path": "tests/fixtures/project/infra/airflow/dags/toniot_hdfs_batch.py",
+      "bytes": 2603,
+      "sha256": "610da46174013a7f25fd75bd55e0c6eb6a8d6b3bd00341d16647bd50bfce333f"
+    },
+    {
+      "path": "tests/fixtures/project/reports/hdfs/etl-full-20261024T171623Z-c82816ee/bronze_transfer.json",
+      "bytes": 2664,
+      "sha256": "80c3dbe84218a9b4ef55bd20276a9a956d5844dedabe76c0775d567d478c94ce"
+    },
+    {
+      "path": "tests/fixtures/project/reports/hdfs/etl-full-20261024T171623Z-c82816ee/build.json",
+      "bytes": 27663,
+      "sha256": "d8c2b2aa6537f30c69d2bd5798ab757e4b3687009b047fe5e14e791a47c888ed"
+    },
+    {
+      "path": "tests/fixtures/project/reports/hdfs/etl-full-20261024T171623Z-c82816ee/comparison.json",
+      "bytes": 1898,
+      "sha256": "72832b53ba5b206d22e1f47c32f1f001ed7853e8df8bc38ddecc4ec603e7f60e"
+    },
+    {
+      "path": "tests/fixtures/project/reports/hdfs/etl-full-20261024T171623Z-c82816ee/plan.json",
+      "bytes": 303673,
+      "sha256": "b1edbe691505689d31bf1fe1ab60e0b01cb95de8003d2457173646b0755042e3"
+    },
+    {
+      "path": "tests/fixtures/project/reports/hdfs/etl-full-20261024T171623Z-c82816ee/reference.json",
+      "bytes": 89,
+      "sha256": "8eb4d93cb2459d1177e2f4c7efc0c87298ba7e9185f7026f05e8f1e7798e8188"
+    },
+    {
+      "path": "tests/fixtures/project/reports/hdfs/etl-full-20261024T171623Z-c82816ee/summary.json",
+      "bytes": 1419,
+      "sha256": "e57219e3fc647f57f8c6debeea9e9be86441f07288b5f47a39e044d80fbd7fdf"
+    },
+    {
+      "path": "tests/fixtures/project/scripts/airflow_etl_task.py",
+      "bytes": 6866,
+      "sha256": "388407cbe3d3784ccbdc05891a79ab81e73461f5862abd4557bf5bc29786acc3"
+    },
+    {
+      "path": "tests/fixtures/project/scripts/hdfs_etl_common.py",
+      "bytes": 8180,
+      "sha256": "aeb16272231c47d5077e30b2ebef9fcea639b7acb1ef631229d2981cc673d212"
+    },
+    {
+      "path": "tests/fixtures/project/scripts/hdfs_etl_compare.py",
+      "bytes": 5276,
+      "sha256": "b5d01f715c32eef3020b8da43df45fb906f7aa816bdb8f90d9eb69c1663a6964"
+    },
+    {
+      "path": "tests/fixtures/project/scripts/hdfs_etl_core.py",
+      "bytes": 8292,
+      "sha256": "d58b5d91232598b15714fb8da26592ebfe32a9b52856524345c21f2f5c484051"
+    },
+    {
+      "path": "tests/fixtures/project/scripts/run_hdfs_etl.py",
+      "bytes": 10470,
+      "sha256": "22d5818d59297924e5ae378805f6cb10d184ef2c1a40cfdbcb53299dbc20af50"
+    },
+    {
+      "path": "tests/fixtures/project/toniot/__init__.py",
+      "bytes": 82,
+      "sha256": "f020d78c48700077ee1203bb2a337884efc830e205d5722a7884d18682064582"
+    },
+    {
+      "path": "tests/fixtures/project/toniot/__main__.py",
+      "bytes": 3873,
+      "sha256": "36d13a246259163dd5a9b902b140710f289fcfcb9040371570785cbe7c4e3641"
+    },
+    {
+      "path": "tests/fixtures/project/toniot/common.py",
+      "bytes": 3941,
+      "sha256": "127033ebc01268d446bea608cd250af2582f9ec391e249b300cfe93e61471ad8"
+    },
+    {
+      "path": "tests/fixtures/project/toniot/ingest.py",
+      "bytes": 6698,
+      "sha256": "c4b5ca8d5caa9f34ced3c6b681ffe63d7e335490687fa092c089143513bdf708"
+    },
+    {
+      "path": "tests/fixtures/project/toniot/report.py",
+      "bytes": 4852,
+      "sha256": "2e83327f309df1f61e8a7b1fbb4161c369d7f5784de6442803e49dafb8311457"
+    },
+    {
+      "path": "tests/fixtures/project/toniot/spark_job.py",
+      "bytes": 17001,
+      "sha256": "db24701e6522c544deb7571dc0ebd1a5c0869a8bbb43c77a149ca08e48bc6f5c"
+    },
+    {
+      "path": "tests/fixtures/project/toniot/timecheck.py",
+      "bytes": 2124,
+      "sha256": "57588c3bf3750da469f42df6bbf03d76031d0fdd09b29c1b082c8dfb217de621"
+    },
+    {
+      "path": "tests/stress_prepare_host_evaluation.py",
+      "bytes": 5176,
+      "sha256": "a75aa937d725aa9e3f2d8953ecba2691b57d7ae174624c077c525b90dd455da7"
+    },
+    {
+      "path": "tests/test_airflow_adapter.py",
+      "bytes": 5792,
+      "sha256": "d1e564f6b05ff458612fb09f1c20f1c6c88002991eba3df479cecd7db51e4cb6"
+    },
+    {
+      "path": "tests/test_benchmark.py",
+      "bytes": 8207,
+      "sha256": "6711b7798829db1006bf874939398349dee9a992f9e98acdd46139b6dcae58f7"
+    },
+    {
+      "path": "tests/test_bridge.py",
+      "bytes": 10477,
+      "sha256": "76bc68b5942f351a7ef0c72653df1d787abdf5ad50644317730eefc8b0de8d52"
+    },
+    {
+      "path": "tests/test_comparison.py",
+      "bytes": 2576,
+      "sha256": "4c500229b4b363c22c3c5a47d36d9f5239ec5042ece487ab3f7f1062dee42be4"
+    },
+    {
+      "path": "tests/test_dashboard.py",
+      "bytes": 2760,
+      "sha256": "6f1d70203f69cd0657090a222e90e9ccdf382503deeca7aeb3f0ca6039c4cbae"
+    },
+    {
+      "path": "tests/test_diagnostic.py",
+      "bytes": 3272,
+      "sha256": "91c40b9c67cfd8ade381ebca35268d914bb13f1e98f61e9476ef02a44d63689a"
+    },
+    {
+      "path": "tests/test_hdfs_etl.py",
+      "bytes": 9373,
+      "sha256": "0eabafe03838ee378889b090ddc98e8cb111ee721f61e446318665d65526a57b"
+    },
+    {
+      "path": "tests/test_host_baseline.py",
+      "bytes": 6106,
+      "sha256": "b7886b02211d0344a2b68516baa002f5298e0f9d7cb691aeb54ed7b35e8b5f45"
+    },
+    {
+      "path": "tests/test_iot.py",
+      "bytes": 3421,
+      "sha256": "f6750bf8492646e7ffab1fa8c0d4d3a02f49c2b4417b8a0efe50de9e247583ce"
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "bytes": 8865,
+      "sha256": "fc2fd0716907a874049dd56a0fad403ef7801e6e7159fb0c882ce0f216cbeafc"
+    },
+    {
+      "path": "tests/test_prepare_host_evaluation.py",
+      "bytes": 6114,
+      "sha256": "17b18f4a442b96f5c215387cb2652f4cdb7594cdd757dda41cc6ed6780249b53"
+    },
+    {
+      "path": "tests/test_release_tools.py",
+      "bytes": 2867,
+      "sha256": "1ed8c9ac605d65bf87f5f0c2ab7d5d456f00eae8ebc9eb43313aea6c0c6beb01"
+    },
+    {
+      "path": "tests/test_roundtrip.py",
+      "bytes": 4691,
+      "sha256": "f6fbe135dea751f2b0a5899696d66ff50227e50fda068245fc3e9bae509ce96c"
+    },
+    {
+      "path": "tests/test_serving.py",
+      "bytes": 5687,
+      "sha256": "d27ef2efb90b1da7ef76dcf6a1b3a7b39d7ef773a7961273398c6e1fbc9a2b60"
+    },
+    {
+      "path": "toniot/__init__.py",
+      "bytes": 82,
+      "sha256": "f020d78c48700077ee1203bb2a337884efc830e205d5722a7884d18682064582"
+    },
+    {
+      "path": "toniot/__main__.py",
+      "bytes": 3873,
+      "sha256": "36d13a246259163dd5a9b902b140710f289fcfcb9040371570785cbe7c4e3641"
+    },
+    {
+      "path": "toniot/common.py",
+      "bytes": 3941,
+      "sha256": "127033ebc01268d446bea608cd250af2582f9ec391e249b300cfe93e61471ad8"
+    },
+    {
+      "path": "toniot/ingest.py",
+      "bytes": 6698,
+      "sha256": "c4b5ca8d5caa9f34ced3c6b681ffe63d7e335490687fa092c089143513bdf708"
+    },
+    {
+      "path": "toniot/report.py",
+      "bytes": 4852,
+      "sha256": "2e83327f309df1f61e8a7b1fbb4161c369d7f5784de6442803e49dafb8311457"
+    },
+    {
+      "path": "toniot/spark_job.py",
+      "bytes": 17001,
+      "sha256": "db24701e6522c544deb7571dc0ebd1a5c0869a8bbb43c77a149ca08e48bc6f5c"
+    },
+    {
+      "path": "toniot/timecheck.py",
+      "bytes": 2124,
+      "sha256": "57588c3bf3750da469f42df6bbf03d76031d0fdd09b29c1b082c8dfb217de621"
+    },
+    {
+      "path": "tools/check_dataset.py",
+      "bytes": 1854,
+      "sha256": "50946ce7b1a0cee28b301505da7d2c426a8044ff9adf7cab117473fcdc255414"
+    },
+    {
+      "path": "tools/package_release.py",
+      "bytes": 2974,
+      "sha256": "1674d99b1d9f0136a63be1848fa959cdbf95ae44b88919b27f6aaf9d66003eec"
+    }
+  ]
+}

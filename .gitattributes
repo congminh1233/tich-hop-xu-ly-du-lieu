@@ -1,0 +1,2 @@
+# Existing receipts hash exact bytes: do not silently convert line endings.
+* -text

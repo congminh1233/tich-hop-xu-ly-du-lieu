@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+dist/
+*.zip
+*.zip.sha256
+data/raw/*
+data/ground_truth/*
+lake/
+reports/
+infra/**/.env
+infra/**/state/
+infra/airflow/logs/
+infra/airflow/config/*.json
+infra/serving/config.json
+infra/serving/last_run.json
+# Bundled approved scores are intentionally part of this release.
+experiments/*_rebuild/

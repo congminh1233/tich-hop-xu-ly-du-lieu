@@ -1,0 +1,10 @@
+{
+  "version": "windows-topology-v1",
+  "evidence_ref": "https://arxiv.org/html/2010.08522v1#S3",
+  "evidence_level": "published_testbed_topology",
+  "validity": "Dataset testbed only; lease/session intervals are not independently verified",
+  "hosts": [
+    {"source_id": "windows7", "entity_id": "windows7_host", "ip": "192.168.1.193"},
+    {"source_id": "windows10", "entity_id": "windows10_host", "ip": "192.168.1.195"}
+  ]
+}

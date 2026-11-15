@@ -1,0 +1,72 @@
+name: it5427-hdfs
+x-common: &common
+  image: it5427-hdfs-spark:3.3.4-3.5.7-v1
+  pull_policy: never
+  networks: [data]
+  logging:
+    driver: json-file
+    options:
+      max-size: 10m
+      max-file: '3'
+services:
+  namenode:
+    <<: *common
+    hostname: namenode
+    build:
+      context: .
+      args:
+        LOCAL_UID: ${LOCAL_UID:-1000}
+        LOCAL_GID: ${LOCAL_GID:-1000}
+    command: [namenode]
+    ports: ['127.0.0.1:9870:9870']
+    volumes: ['namenode_data:/data/name']
+    mem_limit: 1g
+    cpus: 1.0
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, python, /opt/it5427/health.py, namenode]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 30s
+  datanode:
+    <<: *common
+    hostname: datanode
+    command: [datanode]
+    volumes: ['datanode_data:/data/data']
+    mem_limit: 1536m
+    cpus: 1.0
+    restart: unless-stopped
+    depends_on:
+      namenode:
+        condition: service_started
+    healthcheck:
+      test: [CMD, python, /opt/it5427/health.py, datanode]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+      start_period: 30s
+  client:
+    <<: *common
+    profiles: [tools]
+    command: [hdfs, dfsadmin, -report]
+    mem_limit: 4g
+    cpus: 2.0
+    volumes:
+      - type: bind
+        source: ../..
+        target: /project
+        read_only: true
+      - type: bind
+        source: ../../reports/hdfs
+        target: /reports
+    depends_on:
+      namenode:
+        condition: service_healthy
+      datanode:
+        condition: service_healthy
+networks:
+  data: {}
+volumes:
+  namenode_data: {}
+  datanode_data: {}

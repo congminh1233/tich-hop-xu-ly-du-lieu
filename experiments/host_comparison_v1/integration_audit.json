@@ -1,0 +1,36 @@
+{
+  "hosts": [
+    {
+      "entity_id": "windows10_host",
+      "union_windows": 9102,
+      "shared_windows": 3278,
+      "network_only": 2084,
+      "os_only": 3740,
+      "shared_fraction_of_union": 0.36014062843331135,
+      "source_label_disagreements": 254,
+      "disagreement_fraction_of_shared": 0.0774862721171446
+    },
+    {
+      "entity_id": "windows7_host",
+      "union_windows": 10111,
+      "shared_windows": 2347,
+      "network_only": 2595,
+      "os_only": 5169,
+      "shared_fraction_of_union": 0.2321234299278014,
+      "source_label_disagreements": 453,
+      "disagreement_fraction_of_shared": 0.1930123561994035
+    }
+  ],
+  "count_mismatch_windows": {
+    "network": 0,
+    "os": 0
+  },
+  "interpretation": "Coverage is descriptive, not entity-link accuracy. Non-overlap may reflect source collection periods. Label disagreement is preserved; it is not automatically bad data.",
+  "not_verified": [
+    "raw CSV correctness",
+    "clock offset validity",
+    "IP-to-host mapping truth",
+    "attack ground truth independence",
+    "Silver lineage reconstruction"
+  ]
+}

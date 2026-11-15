@@ -1,0 +1,94 @@
+name: it5427-airflow
+x-airflow: &airflow
+  image: it5427-airflow:3.1.0-v1
+  build: .
+  user: "${AIRFLOW_UID}:0"
+  environment: &env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__CORE__PARALLELISM: '1'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+    AIRFLOW__CORE__AUTH_MANAGER: airflow.api_fastapi.auth.managers.simple.simple_auth_manager.SimpleAuthManager
+    AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_USERS: admin:admin
+    AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_PASSWORDS_FILE: /opt/airflow/state/passwords.json
+    AIRFLOW__CORE__EXECUTION_API_SERVER_URL: http://api-server:8080/execution/
+    AIRFLOW__CORE__FERNET_KEY: ${FERNET_KEY}
+    AIRFLOW__API_AUTH__JWT_SECRET: ${JWT_SECRET}
+    AIRFLOW__API__SECRET_KEY: ${API_SECRET}
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:${POSTGRES_PASSWORD}@postgres/airflow
+    AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
+    AIRFLOW__DAG_PROCESSOR__REFRESH_INTERVAL: '15'
+    AIRFLOW__DAG_PROCESSOR__PARSING_PROCESSES: '1'
+  volumes:
+    - ./dags:/opt/airflow/dags:ro
+    - ./config:/opt/airflow/config:ro
+    - ./logs:/opt/airflow/logs
+    - ./state:/opt/airflow/state
+  depends_on:
+    postgres:
+      condition: service_healthy
+  restart: unless-stopped
+  logging:
+    driver: json-file
+    options: {max-size: 10m, max-file: '3'}
+services:
+  postgres:
+    image: postgres:16.10-bookworm
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: airflow
+    volumes: [metadata:/var/lib/postgresql/data]
+    mem_limit: 768m
+    healthcheck:
+      test: [CMD-SHELL, 'pg_isready -U airflow -d airflow']
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+  init:
+    <<: *airflow
+    command: [db, migrate]
+    restart: 'no'
+    profiles: [tools]
+    mem_limit: 1g
+  api-server:
+    <<: *airflow
+    command: [api-server, --workers, '1']
+    ports: ['127.0.0.1:8080:8080']
+    mem_limit: 1536m
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8080/api/v2/monitor/health',timeout=5)"]
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 60s
+  scheduler:
+    <<: *airflow
+    command: [scheduler]
+    group_add: ['${DOCKER_GID}']
+    volumes:
+      - ./dags:/opt/airflow/dags:ro
+      - ./config:/opt/airflow/config:ro
+      - ./logs:/opt/airflow/logs
+      - ./state:/opt/airflow/state
+      - /var/run/docker.sock:/var/run/docker.sock
+    mem_limit: 2g
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8974/health',timeout=5)"]
+      interval: 15s
+      timeout: 10s
+      retries: 20
+      start_period: 60s
+  dag-processor:
+    <<: *airflow
+    command: [dag-processor]
+    mem_limit: 1g
+    healthcheck:
+      test: [CMD-SHELL, 'airflow jobs check --job-type DagProcessorJob --hostname "$${HOSTNAME}"']
+      interval: 30s
+      timeout: 20s
+      retries: 10
+      start_period: 60s
+volumes:
+  metadata: {}

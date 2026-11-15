@@ -1,0 +1,212 @@
+{
+  "iot_garage_door": {
+    "normal_train_count": 3969,
+    "fit_count": 3175,
+    "calibration_count": 794,
+    "groups": {
+      "values": {
+        "status": "fitted",
+        "threshold": 3.2599863023634046,
+        "comparison": "strict >",
+        "rank": 756,
+        "calibration_alerts": 1,
+        "calibration_count": 794
+      },
+      "activity": {
+        "status": "fitted",
+        "threshold": 9.520283997373529,
+        "comparison": "strict >",
+        "rank": 756,
+        "calibration_alerts": 28,
+        "calibration_count": 794
+      },
+      "combined": {
+        "status": "fitted",
+        "threshold": 9.520283997373529,
+        "comparison": "strict >",
+        "rank": 756,
+        "calibration_alerts": 28,
+        "calibration_count": 794
+      }
+    },
+    "numeric": {
+      "event_count": {
+        "center": 4.110873864173311,
+        "scale": 0.16238218388634906,
+        "scale_method": "IQR_fallback",
+        "transform": "log1p"
+      }
+    },
+    "category_counts": {
+      "{\"door\":[\"closed\"],\"phone\":[false]}": 121,
+      "{\"door\":[\"closed\",\"open\"],\"phone\":[false,true]}": 3054
+    },
+    "status": "fitted",
+    "fit_first_utc": "2019-03-31T19:36:00+00:00",
+    "fit_last_utc": "2019-04-17T18:54:00+00:00",
+    "calibration_first_utc": "2019-04-17T18:55:00+00:00",
+    "calibration_last_utc": "2019-04-26T03:50:00+00:00"
+  },
+  "iot_modbus": {
+    "normal_train_count": 4371,
+    "fit_count": 3496,
+    "calibration_count": 875,
+    "groups": {
+      "values": {
+        "status": "fitted",
+        "threshold": 8.69166219031137,
+        "comparison": "strict >",
+        "rank": 833,
+        "calibration_alerts": 42,
+        "calibration_count": 875
+      },
+      "activity": {
+        "status": "fitted",
+        "threshold": 2.952348832797663,
+        "comparison": "strict >",
+        "rank": 833,
+        "calibration_alerts": 26,
+        "calibration_count": 875
+      },
+      "combined": {
+        "status": "fitted",
+        "threshold": 8.703644724564315,
+        "comparison": "strict >",
+        "rank": 833,
+        "calibration_alerts": 42,
+        "calibration_count": 875
+      }
+    },
+    "numeric": {
+      "event_count": {
+        "center": 3.2188758248682006,
+        "scale": 0.22793528520975612,
+        "scale_method": "IQR_fallback",
+        "transform": "log1p"
+      },
+      "FC1_Read_Input_Register__mean": {
+        "center": 32860.72916666667,
+        "scale": 5619.682045833339,
+        "scale_method": "MAD",
+        "transform": "identity"
+      },
+      "FC1_Read_Input_Register__range": {
+        "center": 57174.5,
+        "scale": 6263.985,
+        "scale_method": "MAD",
+        "transform": "identity"
+      },
+      "FC2_Read_Discrete_Value__mean": {
+        "center": 32545.319444444445,
+        "scale": 5503.699483333334,
+        "scale_method": "MAD",
+        "transform": "identity"
+      },
+      "FC2_Read_Discrete_Value__range": {
+        "center": 57419.0,
+        "scale": 5761.3836,
+        "scale_method": "MAD",
+        "transform": "identity"
+      },
+      "FC3_Read_Holding_Register__mean": {
+        "center": 32646.243055555555,
+        "scale": 5467.177354545454,
+        "scale_method": "MAD",
+        "transform": "identity"
+      },
+      "FC3_Read_Holding_Register__range": {
+        "center": 57538.5,
+        "scale": 5871.837299999999,
+        "scale_method": "MAD",
+        "transform": "identity"
+      },
+      "FC4_Read_Coil__mean": {
+        "center": 32664.625,
+        "scale": 5531.818874999999,
+        "scale_method": "MAD",
+        "transform": "identity"
+      },
+      "FC4_Read_Coil__range": {
+        "center": 57365.5,
+        "scale": 5905.9371,
+        "scale_method": "MAD",
+        "transform": "identity"
+      }
+    },
+    "category_counts": {},
+    "status": "fitted",
+    "fit_first_utc": "2019-03-31T19:36:00+00:00",
+    "fit_last_utc": "2019-04-17T18:52:00+00:00",
+    "calibration_first_utc": "2019-04-17T18:53:00+00:00",
+    "calibration_last_utc": "2019-04-25T15:14:00+00:00"
+  },
+  "iot_weather": {
+    "normal_train_count": 4705,
+    "fit_count": 3764,
+    "calibration_count": 941,
+    "groups": {
+      "values": {
+        "status": "fitted",
+        "threshold": 4.732625820762796,
+        "comparison": "strict >",
+        "rank": 895,
+        "calibration_alerts": 46,
+        "calibration_count": 941
+      },
+      "activity": {
+        "status": "fitted",
+        "threshold": 2.3497830695706337,
+        "comparison": "strict >",
+        "rank": 895,
+        "calibration_alerts": 40,
+        "calibration_count": 941
+      },
+      "combined": {
+        "status": "fitted",
+        "threshold": 4.739282996902818,
+        "comparison": "strict >",
+        "rank": 895,
+        "calibration_alerts": 46,
+        "calibration_count": 941
+      }
+    },
+    "numeric": {
+      "event_count": {
+        "center": 4.110873864173311,
+        "scale": 0.6579009469985905,
+        "scale_method": "std_fallback",
+        "transform": "log1p"
+      },
+      "temperature__mean": {
+        "center": 37.41753887175,
+        "scale": 3.3490959526555857,
+        "scale_method": "MAD",
+        "transform": "identity"
+      },
+      "temperature__range": {
+        "center": 18.51061917,
+        "scale": 6.124198963385996,
+        "scale_method": "MAD",
+        "transform": "identity"
+      },
+      "humidity__mean": {
+        "center": 58.153953144666666,
+        "scale": 11.58076071376804,
+        "scale_method": "MAD",
+        "transform": "identity"
+      },
+      "humidity__range": {
+        "center": 64.03419548,
+        "scale": 20.337198291855906,
+        "scale_method": "MAD",
+        "transform": "identity"
+      }
+    },
+    "category_counts": {},
+    "status": "fitted",
+    "fit_first_utc": "2019-03-31T19:36:00+00:00",
+    "fit_last_utc": "2019-04-17T19:51:00+00:00",
+    "calibration_first_utc": "2019-04-17T19:52:00+00:00",
+    "calibration_last_utc": "2019-04-26T09:06:00+00:00"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "version": "unix-v1-iot-unresolved",
+  "unix": {"unit": "seconds", "timezone": "UTC"},
+  "iot": {},
+  "note": "No automatic +7h. Run validate-time for each IoT ground-truth file. The prior plan reports +25200 seconds; this must be verified against local artifacts."
+}
